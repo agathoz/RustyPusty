@@ -1,14 +1,6 @@
-@"
-FROM rust:1.78 AS builder
-RUN cargo install zola --version 0.19.2
-
-FROM builder AS zola-builder
-WORKDIR /app
-COPY . .
-RUN zola build
-
-FROM nginx:alpine
-COPY --from=zola-builder /app/public /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-"@ | Out-File -FilePath Dockerfile -Encoding ASCII
+{
+    "framework": null,
+    "installCommand": "echo \"${ZOLA_VERSION:-\"latest\"}\" | sed '/^latest$/!s/\\(.*\\)/tags\\/v\\1/' | xargs -I% curl -fsSL \"https://api.github.com/repos/getzola/zola/releases/%\" | grep -oP \"\\\"browser_download_url\\\": ?\\\"\\K(.+linux-${ZOLA_LIBC:-\"musl\"}\\\\.tar\\\\.gz)\" | xargs curl -fsSL | tar -xz",
+    "buildCommand": "./zola build",
+    "outputDirectory": "public"
+}
