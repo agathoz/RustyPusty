@@ -1,0 +1,9 @@
+{
+  "buildCommand": "zola build",
+  "outputDirectory": "public",
+  "build": {
+    "env": {
+      "ZOLA_VERSION": "0.19.2"
+    }
+  }
+}
