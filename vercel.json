@@ -3,7 +3,6 @@
   "outputDirectory": "public",
   "build": {
     "env": {
-      "ZOLA_VERSION": "0.22.0"
-    }
+   "ZOLA_VERSION": "0.19.2"    
   }
 }
