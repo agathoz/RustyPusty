@@ -1,0 +1,25 @@
+:root {
+  --pastel-morado: #6a4c93;
+  --pastel-azul: #4a6fa5;
+  --pastel-blanco: #f0f0f0;
+}
+
+body {
+  background: #1a1a1a;
+  color: var(--pastel-blanco);
+  font-family: monospace;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: var(--pastel-azul);
+  text-decoration: none;
+}
+
+.container {
+  border: 2px solid var(--pastel-morado);
+  padding: 25px;
+}
