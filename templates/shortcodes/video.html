@@ -1,0 +1,13 @@
+<div class="video-wrapper {% if full_bleed %}full-bleed{% endif %}">
+    <video
+        src="{{ url }}"
+        {% if controls %}controls{% endif %}
+        {% if autoplay %}autoplay{% endif %}
+        {% if loop %}loop{% endif %}
+        {% if muted %}muted{% endif %}
+        {% if playsinline %}playsinline{% endif %}
+        loading="lazy"
+    >
+        {{ alt | default(value="Video") }}
+    </video>
+</div>

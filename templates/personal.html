@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container fade-up">
+    <h1 class="section-title">Personal Zone</h1>
+    
+    <div class="personal-grid">
+        <!-- Music Section -->
+        <div class="personal-card music-card">
+            <h2><i class="fas fa-music"></i> Audio Feed</h2>
+            <div class="content-block">
+                <p>No APIs here, just raw vibes. My current rotation:</p>
+                <ul class="styled-list">
+                    <li><a href="https://youtube.com/playlist?list=PL_a-90yQDwnwysBXeah4EdhN9J4rRbTFk&si=ymwIjVDwrGrw8v7W" target="_blank">My Hacking Playlist</a></li>
+                    <li><a href="https://youtube.com/playlist?list=PL_a-90yQDwnz9ac_6y4kb1DnD2YLtkClc&si=IkvUbOHcpNoxnApX" target="_blank">Chill / Lofi Mix</a></li>
+                    <li><a href="https://youtu.be/6X6pWZoW0Zo?si=wkYGDul65a0o7oHX" target="_blank">Perturbator - Dangerous Days</a></li>
+                    <li><a href="https://youtu.be/6X6pWZoW0Zo?si=wkYGDul65a0o7oHX" target="_blank">Carpenter Brut - Trilogy</a></li>
+                    <li><a href="https://youtu.be/oJ1yWRJ2Yl8?si=wkYGDul65a0o7oHX" target="_blank">The Toxic Avenger - Chase II</a></li>
+                    <li><a href="https://youtu.be/6X6pWZoW0Zo?si=wkYGDul65a0o7oHX" target="_blank">skinwalker14 - an organism dies</a></li>
+                    <li><a href="https://youtu.be/6X6pWZoW0Zo?si=wkYGDul65a0o7oHX" target="_blank">Ampongabendanitte & skinwalker14 - post-Soviet grenade launcher (full album)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gaming Section -->
+        <div class="personal-card gaming-card">
+            <h2><i class="fas fa-gamepad"></i> Gaming Protocol</h2>
+            <div class="content-block">
+                <p>
+                    <a href="https://steamcommunity.com/profiles/76561198985080096/" target="_blank" class="accent-link">
+                        <i class="fab fa-steam"></i> Visit my Steam Profile :)
+                    </a>
+                </p>
+                <h3 class="subsection-header">Recommended Games:</h3>
+                <ul class="styled-list">
+                    <li><a href="https://store.steampowered.com/app/1262630/Psychopomp/" target="_blank">Psychopomp</a></li>
+                    <li><a href="https://store.steampowered.com/app/1262630/Psychopomp/" target="_blank">Milk outside a bag of Milk</a></li>
+                    <li><a href="https://store.steampowered.com/app/1262630/Psychopomp/" target="_blank">Cruelty Squad</a></li>
+                    <li><a href="https://store.steampowered.com/agecheck/app/287020/" target="_blank"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287020/header.jpg" alt="">Harvester</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects & Forges -->
+        <div class="personal-card projects-card">
+            <h2><i class="fas fa-code-branch"></i> Code Forges</h2>
+             <div class="content-block">
+                <p>Where my source code lives:</p>
+                <ul class="styled-list">
+                    <li>
+                        <a href="https://github.com/Agathoz" target="_blank" class="accent-link">
+                            <i class="fab fa-github"></i> GitHub (Agathoz)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://codeberg.org/agathoz" target="_blank" class="accent-link">
+                            <i class="fas fa-code"></i> Codeberg (agathoz)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Recommended Tools -->
+         <div class="personal-card tools-card">
+            <h2><i class="fas fa-toolbox"></i> Tool Archive</h2>
+             <div class="content-block">
+                <p>Essential repositories & tools:</p>
+                <ul class="styled-list">
+                    <li><a href="https://github.com/sqlmapproject/sqlmap" target="_blank">sqlmap</a> - SQL Injection</li>
+                    <li><a href="https://github.com/danielmiessler/SecLists" target="_blank">SecLists</a> - Wordlists</li>
+                    <li><a href="https://github.com/carlospolop/PEASS-ng" target="_blank">PEASS-ng</a> - PrivEsc</li>
+                    <li><a href="https://github.com/gchq/CyberChef" target="_blank">CyberChef</a> - Swiss Army Knife</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- YouTube -->
+         
+
+    </div>
+</div>
+{% endblock content %}

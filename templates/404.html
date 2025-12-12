@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>AGATHØZ - 404</title>
+{% endblock title %}
+
+{% block content %}
+<center>
+		 <h1 class="section-title">Page Not Found</h1>
+
+	<img src="{{ get_url(path='images/404.png') }}" alt="404" center></img>
+	<p>
+		<button>
+<a class="external"  href="{{ get_url(path='/') }}"> Back to Home </a>
+</button>
+</p>
+</center>
+{% endblock content %}

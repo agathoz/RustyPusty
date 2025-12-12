@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container fade-up">
+    <h1 class="section-title">Tags</h1>
+
+    <div class="tags-split-container">
+        <!-- Left Column: Blog Tags -->
+        <div class="tags-column">
+            <h2 class="column-title"><i class="fas fa-pen-fancy"></i> Blog Post Tags</h2>
+            <div class="tags-cloud">
+                {% for term in terms %}
+                    {# Check if any page in this term belongs to 'blog' section #}
+                    {% set_global is_blog = false %}
+                    {% for page in term.pages %}
+                        {% if page.components[0] == "blog" %}
+                            {% set_global is_blog = true %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if is_blog %}
+                    <a href="{{ term.permalink }}" class="tag-chip blog-tag">
+                        <span class="tag-name">#{{ term.name }}</span>
+                        <span class="tag-count">{{ term.pages | length }}</span>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Right Column: Writeup Tags -->
+        <div class="tags-column">
+            <h2 class="column-title"><i class="fas fa-terminal"></i> Writeup Tags</h2>
+            <div class="tags-cloud">
+                {% for term in terms %}
+                    {# Check if any page in this term belongs to 'writeups' section #}
+                    {% set_global is_writeup = false %}
+                    {% for page in term.pages %}
+                        {% if page.components[0] == "writeups" %}
+                            {% set_global is_writeup = true %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if is_writeup %}
+                    <a href="{{ term.permalink }}" class="tag-chip writeup-tag">
+                        <span class="tag-name">#{{ term.name }}</span>
+                        <span class="tag-count">{{ term.pages | length }}</span>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
