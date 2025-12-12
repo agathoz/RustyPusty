@@ -16,5 +16,3 @@ so it is te V3.32.1 of the site
          section 1
          persoanl
 
-yeah this dev now
-<img    src="{{ get_url(path='images/gear.gif' ) }}" alt="gear" >
