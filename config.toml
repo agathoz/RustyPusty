@@ -7,6 +7,10 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+taxonomies = [
+    {name = "tags"},
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -19,3 +23,10 @@ author ="Ɐ G A T H Ø Z"
 role="cute-catgirl"
 github ="agathoz"
 twitter ="ke0pzerk"
+linkedin ="eri-hacks"
+youtube ="Agathozerk"
+discord = "https://discord.gg/azazelsec"
+matrix = "https://matrix.to/#/@agathoz:matrix.org"
+email = "kramnd@protonmail.com"
+kofi = "https://ko-fi.com/agathoz"
+codeberg ="agathoz"

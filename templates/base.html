@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="{{ config.default_language | default(value="en") }}">
+
 <head>
-<link rel="icon" href="{{ get_url(path='gear.gif') }}" type="image/x-icon">
-      <link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) | safe }}">
-  <meta charset="utf-8">
-  <title> AGATHØZ </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AGATHØZ{% endblock title %}</title>
+    
+      <link rel="icon" href="{{ get_url(path='images/favicon.ico' ) }}" type="image/x-icon">
+    
+    <!-- SEO & OpenGraph -->
+    <meta name="description" content="Cyberpunk Security Researcher & Developer Portfolio">
+    <meta property="og:url" content="{{ config.base_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AGATHØZ">
+    <meta property="og:description" content="Cyberpunk Security Researcher & Developer Portfolio">
+    <meta property="og:image" content="{{ get_url(path='images/AGA.png') }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="agathoz.xyz">
+    <meta property="twitter:url" content="{{ config.base_url }}">
+    <meta name="twitter:title" content="AGATHØZ">
+    <meta name="twitter:description" content="Cyberpunk Security Researcher & Developer Portfolio">
+    <meta name="twitter:image" content="{{ get_url(path='images/AGA.png') }}">
+    
+    <style>
+        ::selection { background: var(--accent-pink); color: #fff; text-shadow: none; }
+        ::-moz-selection { background: var(--accent-pink); color: #fff; text-shadow: none; }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="{{ get_url(path='css/style.css', trailing_slash=false) | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='css/markdown.css', trailing_slash=false) | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='css/alerts.css', trailing_slash=false) | safe }}">
+
+    <!-- KaTeX Math -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4sm51nBdGOwMJE1+14BMcx5pFCffH6hjV0RB5s67JkZuH75" crossorigin="anonymous">
+
+    <!-- Scripts -->
+    <script src="{{ get_url(path='js/alerts.js') }}" defer></script>
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock content %}
+    {% include "header.html" %}
 
-           <div class="grid">
-      <main class="card fade-up">
-        <section>
-          <h2>About</h2>
-          <p class="bio">     
-                Hello world, I'm E.E. (BELAMI) a computer systems engineering student with a strong interest in cybersecurity, low-level programming.
-          </p>
-
-       <h2>Current Interests</h2>
-<ul>
-  <li>Rust, Zig, ASM, C++</li>
-  <li>Linux internals</li>
-  <li>Systems security</li>
-  <li>Reverse engineering</li>
-  <li>Embedded (Raspberry / ESP)</li>
-  <li>Networking</li>
-  <li>HTB, labs, writups</li>
-</ul>
+    <div class="main-container">
+        {% block content %} 
+        {% endblock content %}
     </div>
-  </section>
+
+    {% include "footer.html" %}
+
+    <!-- KaTeX Scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+              delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false},
+                  {left: '\\(', right: '\\)', display: false},
+                  {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError : false,
+              strict: false,
+              trust: true
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

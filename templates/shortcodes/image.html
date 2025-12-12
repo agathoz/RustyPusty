@@ -1,0 +1,7 @@
+<img 
+    src="{{ url }}" 
+    alt="{{ alt | default(value="") }}"
+    class="{% if full %}full-width{% endif %} {% if full_bleed %}full-bleed{% endif %} {% if no_hover %}no-hover{% endif %} {% if spoiler %}spoiler-img{% endif %}"
+    {% if url_min %}data-src-full="{{ url }}"{% endif %}
+    loading="lazy"
+/>

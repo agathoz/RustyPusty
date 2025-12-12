@@ -1,0 +1,37 @@
+{% block header %}
+<header id="header-logo">
+
+    <!-- Header Content Overlay -->
+    <div class="header-content">
+        <!-- Logo -->
+        <a href="{{ config.base_url }}" class="logo-link">
+            <img
+                src="{{ get_url(path='images/AGA.png') }}"
+                alt="Agathoz Logo"
+            />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="glassy-nav">
+            <div class="nav-links">
+                <a href="{{ config.base_url }}" class="nav-link link-home">
+                    <i class="fas fa-user-secret"></i><span>Agathoz</span>
+                </a>
+                <a href="{{ get_url(path='@/blog/_index.md') | default(value='/blog') }}" class="nav-link link-posts">
+                    <i class="fas fa-computer"></i><span>Posts</span>
+                </a>
+                <a href="/tags" class="nav-link link-tags">
+                    <i class="fas fa-adjust"></i><span>Tags</span>
+                </a>
+                <a href="/writeups" class="nav-link link-writeups">
+                    <i class="fas fa-cube"></i><span>Writeups</span>
+                </a>
+                <a href="/personal" class="nav-link link-personal">
+                    <i class="fas fa-code"></i><span>Personal</span>
+                </a>
+            </div>
+        </nav>
+        <script src="{{ get_url(path='js/nav.js') }}"></script>
+    </div>
+</header>
+    {% endblock header %}

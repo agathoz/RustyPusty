@@ -1,0 +1,63 @@
+.alert {
+    padding: 1rem 1rem 1rem 3rem; /* Left padding for icon */
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+    position: relative;
+    background: var(--bg-secondary);
+    font-size: 1rem;
+    color: var(--text-primary);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.alert::before {
+    position: absolute;
+    left: 1rem;
+    top: 1.1rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.alert-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-terminal);
+}
+
+/* Colors and Icons */
+.alert-note {
+    border-color: #539bf5;
+    background: rgba(83, 155, 245, 0.1);
+}
+.alert-note::before { content: "\f05a"; color: #539bf5; } /* Info Circle */
+.alert-note .alert-title { color: #539bf5; }
+
+.alert-tip {
+    border-color: #57ab5a;
+    background: rgba(87, 171, 90, 0.1);
+}
+.alert-tip::before { content: "\f0eb"; color: #57ab5a; } /* Lightbulb */
+.alert-tip .alert-title { color: #57ab5a; }
+
+.alert-important {
+    border-color: #986ee2;
+    background: rgba(152, 110, 226, 0.1);
+}
+.alert-important::before { content: "\f00c"; color: #986ee2; } /* Check/Comment */
+.alert-important .alert-title { color: #986ee2; }
+
+.alert-warning {
+    border-color: #c69026;
+    background: rgba(198, 144, 38, 0.1);
+}
+.alert-warning::before { content: "\f071"; color: #c69026; } /* Exclamation Triangle */
+.alert-warning .alert-title { color: #c69026; }
+
+.alert-caution {
+    border-color: #e5534b;
+    background: rgba(229, 83, 75, 0.1);
+}
+.alert-caution::before { content: "\f05e"; color: #e5534b; } /* Ban/Stop */
+.alert-caution .alert-title { color: #e5534b; }
