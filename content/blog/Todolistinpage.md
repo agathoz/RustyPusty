@@ -17,4 +17,7 @@ so it is te V3.32.1 of the site
          persoanl
 
 yeah this dev now
-<img    src="{{ get_url(path='images/gear.gif' ) }}" alt="gear" >
+
+
+<img src="{{ get_url(path='images/gear.gif' ) }}" alt="gear" >
+</img>
