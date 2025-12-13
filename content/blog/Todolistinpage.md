@@ -11,8 +11,9 @@ but i will do it
 hehe
 the point of this site is to have fun and learn new things
 so i will do it >:D
-so it is te V3.32.1 of the site
+	
 
-         section 1
-         persoanl
-
+<h1>writing this</h1>
+<center>
+<img src="{{ get_url(path='images/gear.gif') }}" alt="gears" center></img>
+</center>
