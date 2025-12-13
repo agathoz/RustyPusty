@@ -3,7 +3,7 @@ title = "need to fix"
 date = 2025-12-12
 description = "A todo list for the fix and adding features to the site."
 [taxonomies]
-tags = ["todo", "update" ]
+tags = ["fixing", "update" ]
 +++
 
 yeas some dificults for add apis and fix the site
@@ -14,7 +14,6 @@ so i will do it >:D
 	
 
 <h1>writing this</h1>
-<center>
-<img src="images/gear.gif" alt="gears"></img>
-</center>
+
+
 
