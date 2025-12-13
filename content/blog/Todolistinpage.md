@@ -15,5 +15,6 @@ so i will do it >:D
 
 <h1>writing this</h1>
 <center>
-<img src="{{ get_url(path='images/gear.gif') }}" alt="gears" center></img>
+<img src="images/gear.gif" alt="gears"></img>
 </center>
+
